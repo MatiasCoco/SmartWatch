@@ -5,7 +5,6 @@ import java.util.HashSet;
 public class Carrera extends Deporte {
 
 	private Double ritmo; //(minutos que tarda en completar un km)
-	private ZonaDeFrecuencia zonaDeFrecuencia; //zonaDeFrecuenciaCardiacaActual
 	//private Double valoresDescanso [] = new Double [] {10.0,20.0};
 	private HashSet <ZonaDeFrecuencia> zonas; 
 	public Carrera() {
@@ -28,11 +27,8 @@ public class Carrera extends Deporte {
 		return ritmo;
 	}
 
-	public ZonaDeFrecuencia getZonaDeFrecuencia() {
-		return zonaDeFrecuencia;
-	}
-	
-	public void definirParametrosDeFrecuencia(ZonaDeFrecuencia zona) {
+		
+	public void agregarZonaDeFrecuencia(ZonaDeFrecuencia zona) {
 		this.zonas.add(zona);
 	}
 	
