@@ -44,5 +44,14 @@ public class Carrera extends Deporte {
 		
 		return null;
 	}
+	
+	public ZonaDeFrecuencia buscarZona (Integer idZona) {
+		
+		for (ZonaDeFrecuencia zonaDeFrecuencia : zonas) {
+			if (zonaDeFrecuencia.getId().equals(idZona))
+				return zonaDeFrecuencia;
+		}
+		return null;
+	}
 
 }
