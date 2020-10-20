@@ -16,9 +16,12 @@ public abstract class Deporte {
 
 	protected Double distanciaRecorrida;
 	protected Integer tiempoTranscurrido;
+	protected Integer id;
+	protected String nombre;
 	
-	public Deporte () {
-		
+	public Deporte (Integer id, String nombre) {
+		this.id = id;
+		this.nombre = nombre;
 	}
 	
 	public void aumentoDeDistancia() {

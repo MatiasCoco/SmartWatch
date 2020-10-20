@@ -10,8 +10,8 @@ public class Natacion extends Deporte {
 
 	private Double ritmo;
 
-	public Natacion() {
-		super();
+	public Natacion(Integer id, String nombre) {
+		super (id, nombre);
 	}
 	
 	public void calcularRitmo() {

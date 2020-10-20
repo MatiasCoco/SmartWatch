@@ -12,8 +12,8 @@ public class Ciclismo extends Deporte {
 	private Double velocidad;
 	private HashSet <ZonaDeFrecuencia> zonas; 
 	
-	public Ciclismo() {
-		
+	public Ciclismo(Integer id, String nombre) {
+		super (id, nombre);
 		zonas = new HashSet();
 		
 	}
@@ -49,6 +49,11 @@ public class Ciclismo extends Deporte {
 		}
 		
 		return null;
+	}
+	
+	public Double calcularCadencia () {
+		
+		return 0.0;
 	}
 	
 	//comentario de prueba 

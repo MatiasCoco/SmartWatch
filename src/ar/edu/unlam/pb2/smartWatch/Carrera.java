@@ -7,15 +7,16 @@ public class Carrera extends Deporte {
 	private Double ritmo; //(minutos que tarda en completar un km)
 	//private Double valoresDescanso [] = new Double [] {10.0,20.0};
 	private HashSet <ZonaDeFrecuencia> zonas; 
-	public Carrera() {
-		
+	
+	public Carrera(Integer id, String nombre) {
+		super (id, nombre);
+		this.zonas  = new HashSet <ZonaDeFrecuencia>();
 	}
 
 	public void calcularRitmo() {
 		Double tiempoEnMinutos = this.tiempoTranscurrido /60.0;
 		
 		this.pasarDistanciaAKM();
-		this.zonas  = new HashSet <ZonaDeFrecuencia>();
 		this.ritmo = this.distanciaRecorrida / tiempoEnMinutos;
 	}
 	
@@ -27,7 +28,6 @@ public class Carrera extends Deporte {
 		return ritmo;
 	}
 
-		
 	public void agregarZonaDeFrecuencia(ZonaDeFrecuencia zona) {
 		this.zonas.add(zona);
 	}
