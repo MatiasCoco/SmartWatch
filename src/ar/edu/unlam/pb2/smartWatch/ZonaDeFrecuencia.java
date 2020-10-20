@@ -5,33 +5,11 @@ public class ZonaDeFrecuencia {
 	private String nombreDeLaZona;
 	private Double minima;
 	private Double maxima;
+	private Integer id;
+
 	
-//	public ZonaDeFrecuencia(Double frecuencia) {
-//		
-//		if(frecuencia >= 10.0 && frecuencia <= 20.0) {
-//			
-//			this.frecuencia = "Descanso";
-//		}
-//		
-//		else if(frecuencia > 20.0 && frecuencia <= 30.0) {
-//			
-//			this.frecuencia = "Calentamiento";
-//		}
-//		
-//		else if(frecuencia > 30.0 && frecuencia <= 40.0) {
-//			this.frecuencia = "Aerobico";
-//		}
-//		
-//		else if(frecuencia > 40.0 && frecuencia <= 50.0) {
-//			this.frecuencia = "Umbral";
-//		}
-//		
-//		else if(frecuencia > 50.0 && frecuencia <= 60.0) {
-//			this.frecuencia = "Maximo";
-//		}
-//	}
-	
-	public ZonaDeFrecuencia(Double minima, Double maxima, String nombreDeLaZona) {
+	public ZonaDeFrecuencia(Integer id, Double minima, Double maxima, String nombreDeLaZona) {
+		this.id = id;
 		this.minima=minima;
 		this.maxima=maxima;
 		this.nombreDeLaZona=nombreDeLaZona;
@@ -48,5 +26,36 @@ public class ZonaDeFrecuencia {
 	public Double getMaxima() {
 		return maxima;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ZonaDeFrecuencia other = (ZonaDeFrecuencia) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
+	
+	
 	
 }
