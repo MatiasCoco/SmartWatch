@@ -56,5 +56,12 @@ public class Ciclismo extends Deporte {
 		return 0.0;
 	}
 	
-	//comentario de prueba 
+	public ZonaDeFrecuencia buscarZona (Integer idZona) {
+		
+		for (ZonaDeFrecuencia zonaDeFrecuencia : zonas) {
+			if (zonaDeFrecuencia.getId().equals(idZona))
+				return zonaDeFrecuencia;
+		}
+		return null;
+	}
 }
