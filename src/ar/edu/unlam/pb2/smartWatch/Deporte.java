@@ -17,6 +17,10 @@ public abstract class Deporte {
 	protected Double distanciaRecorrida;
 	protected Integer tiempoTranscurrido;
 	
+	public Deporte () {
+		
+	}
+	
 	public void aumentoDeDistancia() {
 		this.distanciaRecorrida++;
 	}
